@@ -34,8 +34,12 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <a href="#" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center">
-              <span className="text-primary-foreground font-serif font-bold text-xl">K</span>
+            <div className="w-10 h-10 bg-muted rounded-sm flex items-center justify-center overflow-hidden">
+              <img 
+                src="/placeholder.svg" 
+                alt="Logo Kancelarii" 
+                className="w-full h-full object-contain"
+              />
             </div>
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-heading text-lg leading-tight">
