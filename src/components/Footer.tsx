@@ -1,10 +1,7 @@
 import { Facebook, Linkedin, Twitter } from "lucide-react";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-
-  return (
-    <footer className="bg-foreground text-background/80">
+  return <footer className="bg-foreground text-background/80">
       {/* Main Footer */}
       <div className="container py-12">
         <div className="grid md:grid-cols-3 gap-8">
@@ -81,32 +78,16 @@ const Footer = () => {
 
           {/* Social Links */}
           <div className="flex items-center gap-4">
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              aria-label="Facebook"
-            >
+            <a href="#" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="Facebook">
               <Facebook className="w-4 h-4" />
             </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              aria-label="LinkedIn"
-            >
+            <a href="#" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-4 h-4" />
             </a>
-            <a
-              href="#"
-              className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors"
-              aria-label="Twitter"
-            >
-              <Twitter className="w-4 h-4" />
-            </a>
+            
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
