@@ -1,4 +1,6 @@
-import { Facebook, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Linkedin } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-foreground text-background/80">
@@ -7,16 +9,20 @@ const Footer = () => {
         <div className="grid md:grid-cols-3 gap-8">
           {/* Brand */}
           <div>
-            <div className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-primary rounded-sm flex items-center justify-center">
-                <span className="text-primary-foreground font-serif font-bold text-xl">K</span>
+            <Link to="/" className="flex items-center gap-3 mb-4">
+              <div className="w-10 h-10 bg-muted rounded-sm flex items-center justify-center overflow-hidden">
+                <img 
+                  src="/placeholder.svg" 
+                  alt="Logo Kancelarii" 
+                  className="w-full h-full object-contain"
+                />
               </div>
               <div>
                 <p className="font-serif font-semibold text-background text-lg">
                   Kancelaria Adwokacka
                 </p>
               </div>
-            </div>
+            </Link>
             <p className="text-background/60 text-sm leading-relaxed">
               Profesjonalna pomoc prawna oparta na wieloletnim doświadczeniu 
               i indywidualnym podejściu do każdego klienta.
@@ -50,19 +56,14 @@ const Footer = () => {
             <h4 className="font-semibold text-background mb-4">Informacje prawne</h4>
             <ul className="space-y-2">
               <li>
-                <a href="/polityka-prywatnosci" className="text-background/60 hover:text-primary transition-colors text-sm">
+                <Link to="/polityka-prywatnosci" className="text-background/60 hover:text-primary transition-colors text-sm">
                   Polityka Prywatności
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/regulamin" className="text-background/60 hover:text-primary transition-colors text-sm">
+                <Link to="/regulamin" className="text-background/60 hover:text-primary transition-colors text-sm">
                   Regulamin
-                </a>
-              </li>
-              <li>
-                <a href="/rodo" className="text-background/60 hover:text-primary transition-colors text-sm">
-                  Klauzula RODO
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

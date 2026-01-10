@@ -1,6 +1,8 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Footer from "@/components/Footer";
+import BackToTop from "@/components/BackToTop";
 
 const PrivacyPolicy = () => {
   return (
@@ -265,12 +267,8 @@ const PrivacyPolicy = () => {
         </div>
       </main>
 
-      {/* Simple Footer */}
-      <footer className="bg-foreground text-background/60 py-6">
-        <div className="container text-center text-sm">
-          <p>© {new Date().getFullYear()} Kancelaria Adwokacka. Wszelkie prawa zastrzeżone.</p>
-        </div>
-      </footer>
+      <Footer />
+      <BackToTop />
     </div>
   );
 };
