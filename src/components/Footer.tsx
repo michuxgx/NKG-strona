@@ -1,12 +1,13 @@
-import { Facebook, Linkedin } from "lucide-react";
+import { Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return <footer className="bg-foreground text-background/80">
+  return (
+    <footer className="bg-foreground text-background/80">
       {/* Main Footer */}
       <div className="container py-12">
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-4 gap-8">
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
@@ -19,7 +20,7 @@ const Footer = () => {
               </div>
               <div>
                 <p className="font-serif font-semibold text-background text-lg">
-                  Kancelaria Adwokacka
+                  Kancelaria Elegance
                 </p>
               </div>
             </Link>
@@ -27,6 +28,38 @@ const Footer = () => {
               Profesjonalna pomoc prawna oparta na wieloletnim doświadczeniu 
               i indywidualnym podejściu do każdego klienta.
             </p>
+          </div>
+
+          {/* Contact Info */}
+          <div>
+            <h4 className="font-semibold text-background mb-4">Kontakt</h4>
+            <ul className="space-y-3">
+              <li>
+                <a 
+                  href="tel:+48123456789" 
+                  className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm"
+                >
+                  <Phone className="w-4 h-4 flex-shrink-0" />
+                  <span>+48 123 456 789</span>
+                </a>
+              </li>
+              <li>
+                <a 
+                  href="mailto:kontakt@kancelaria.pl" 
+                  className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm"
+                >
+                  <Mail className="w-4 h-4 flex-shrink-0" />
+                  <span>kontakt@kancelaria.pl</span>
+                </a>
+              </li>
+              <li className="flex items-start gap-2 text-background/60 text-sm">
+                <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
+                <span>
+                  ul. Przykładowa 123<br />
+                  00-001 Warszawa
+                </span>
+              </li>
+            </ul>
           </div>
 
           {/* Quick Links */}
@@ -74,7 +107,7 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © {currentYear} Kancelaria Adwokacka. Wszelkie prawa zastrzeżone.
+            © {currentYear} Kancelaria Elegance. Wszelkie prawa zastrzeżone.
           </p>
 
           {/* Social Links */}
@@ -85,10 +118,11 @@ const Footer = () => {
             <a href="#" className="w-9 h-9 rounded-full bg-background/10 flex items-center justify-center hover:bg-primary transition-colors" aria-label="LinkedIn">
               <Linkedin className="w-4 h-4" />
             </a>
-            
           </div>
         </div>
       </div>
-    </footer>;
+    </footer>
+  );
 };
+
 export default Footer;

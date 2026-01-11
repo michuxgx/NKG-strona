@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
 
@@ -50,7 +50,7 @@ const Header = () => {
             </div>
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-heading text-lg leading-tight">
-                Kancelaria Adwokacka
+                Kancelaria Elegance
               </p>
               <p className="text-xs text-muted-foreground tracking-wider uppercase">
                 Adwokat Jan Kowalski
@@ -59,7 +59,7 @@ const Header = () => {
           </Link>
 
           {/* Desktop Navigation */}
-          <nav className="hidden md:flex items-center gap-8">
+          <nav className="hidden md:flex items-center gap-6">
             <button
               onClick={() => scrollToSection("uslugi")}
               className="text-foreground/80 hover:text-primary transition-colors font-medium text-sm tracking-wide"
@@ -72,6 +72,27 @@ const Header = () => {
             >
               O Kancelarii
             </button>
+            
+            {/* Contact Info */}
+            <div className="flex items-center gap-4 ml-4 pl-4 border-l border-border">
+              <a 
+                href="tel:+48123456789" 
+                className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors text-sm"
+                aria-label="Zadzwoń do nas"
+              >
+                <Phone className="w-4 h-4" />
+                <span className="hidden lg:inline">+48 123 456 789</span>
+              </a>
+              <a 
+                href="mailto:kontakt@kancelaria.pl" 
+                className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors text-sm"
+                aria-label="Napisz do nas"
+              >
+                <Mail className="w-4 h-4" />
+                <span className="hidden lg:inline">kontakt@kancelaria.pl</span>
+              </a>
+            </div>
+
             <Button
               onClick={() => scrollToSection("kontakt")}
               className="bg-primary hover:bg-green-hover text-primary-foreground px-6"
@@ -106,6 +127,25 @@ const Header = () => {
               >
                 O Kancelarii
               </button>
+              
+              {/* Mobile Contact Info */}
+              <div className="flex flex-col gap-2 py-2 border-t border-border mt-2 pt-4">
+                <a 
+                  href="tel:+48123456789" 
+                  className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
+                >
+                  <Phone className="w-4 h-4" />
+                  <span>+48 123 456 789</span>
+                </a>
+                <a 
+                  href="mailto:kontakt@kancelaria.pl" 
+                  className="flex items-center gap-2 text-foreground/70 hover:text-primary transition-colors"
+                >
+                  <Mail className="w-4 h-4" />
+                  <span>kontakt@kancelaria.pl</span>
+                </a>
+              </div>
+
               <Button
                 onClick={() => scrollToSection("kontakt")}
                 className="bg-primary hover:bg-green-hover text-primary-foreground w-full"

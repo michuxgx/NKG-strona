@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
+import Layout from "@/components/Layout";
 
 const TermsOfService = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-foreground text-background py-6">
+    <Layout>
+      {/* Back Button */}
+      <div className="pt-24 pb-4 bg-foreground">
         <div className="container">
           <Link to="/">
             <Button variant="ghost" className="text-background hover:text-primary hover:bg-background/10">
@@ -17,10 +16,10 @@ const TermsOfService = () => {
             </Button>
           </Link>
         </div>
-      </header>
+      </div>
 
       {/* Content */}
-      <main className="container py-12 md:py-16">
+      <div className="container py-12 md:py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
             Regulamin
@@ -31,7 +30,7 @@ const TermsOfService = () => {
             <section className="mb-10">
               <p className="text-foreground/80 leading-relaxed">
                 Niniejszy Regulamin określa zasady korzystania z usług prawnych świadczonych przez 
-                Kancelarię Adwokacką oraz warunki korzystania ze strony internetowej.
+                Kancelarię Elegance oraz warunki korzystania ze strony internetowej.
               </p>
             </section>
 
@@ -41,7 +40,7 @@ const TermsOfService = () => {
                 1. Definicje
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80">
-                <li><strong>Kancelaria</strong> – Kancelaria Adwokacka z siedzibą w Warszawie</li>
+                <li><strong>Kancelaria</strong> – Kancelaria Elegance z siedzibą w Warszawie</li>
                 <li><strong>Klient</strong> – osoba fizyczna, prawna lub jednostka organizacyjna korzystająca z usług Kancelarii</li>
                 <li><strong>Usługi prawne</strong> – pomoc prawna świadczona przez Kancelarię zgodnie z ustawą Prawo o adwokaturze</li>
                 <li><strong>Strona internetowa</strong> – witryna dostępna pod adresem kancelarii</li>
@@ -252,7 +251,7 @@ const TermsOfService = () => {
                 W przypadku pytań dotyczących niniejszego Regulaminu prosimy o kontakt:
               </p>
               <div className="bg-muted/50 p-6 rounded-lg mt-4">
-                <p className="text-foreground font-medium">Kancelaria Adwokacka</p>
+                <p className="text-foreground font-medium">Kancelaria Elegance</p>
                 <p className="text-foreground/80">ul. Przykładowa 123</p>
                 <p className="text-foreground/80">00-001 Warszawa</p>
                 <p className="text-foreground/80 mt-2">
@@ -272,11 +271,8 @@ const TermsOfService = () => {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
-      <BackToTop />
-    </div>
+      </div>
+    </Layout>
   );
 };
 
