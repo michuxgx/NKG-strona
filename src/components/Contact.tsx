@@ -23,7 +23,7 @@ const Contact = () => {
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 pointer-events-none" />
               
               <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSe6xZVTQVVmB-5YkT6F_7xG3Uc3QyVYaJ9VyJmTqBUQRyMxKA/viewform?embedded=true"
+                src="https://docs.google.com/forms/d/e/1FAIpQLSeSZJhw4YBjhuEc-4KoY9iY1FYcmo_AVu93yPysVWZApqoCvQ/viewform?embedded=true"
                 width="100%"
                 height="800"
                 frameBorder="0"
