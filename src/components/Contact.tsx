@@ -1,43 +1,6 @@
-import { useState } from "react";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
-import { Checkbox } from "@/components/ui/checkbox";
-import { useToast } from "@/hooks/use-toast";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 const Contact = () => {
-  const { toast } = useToast();
-  const [isSubmitting, setIsSubmitting] = useState(false);
-  const [gdprConsent, setGdprConsent] = useState(false);
-
-  const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-
-    if (!gdprConsent) {
-      toast({
-        title: "Wymagana zgoda",
-        description: "Proszę wyrazić zgodę na przetwarzanie danych osobowych.",
-        variant: "destructive",
-      });
-      return;
-    }
-
-    setIsSubmitting(true);
-
-    // Simulate form submission
-    await new Promise((resolve) => setTimeout(resolve, 1000));
-
-    toast({
-      title: "Wiadomość wysłana",
-      description: "Dziękujemy za kontakt. Odpowiemy najszybciej jak to możliwe.",
-    });
-
-    setIsSubmitting(false);
-    (e.target as HTMLFormElement).reset();
-    setGdprConsent(false);
-  };
-
   return (
     <section id="kontakt" className="section-padding bg-background">
       <div className="container">
@@ -53,96 +16,26 @@ const Contact = () => {
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
-          {/* Contact Form */}
+          {/* Google Form Embed */}
           <div className="lg:col-span-3">
-            <form onSubmit={handleSubmit} className="space-y-6">
-              <div className="grid sm:grid-cols-2 gap-6">
-                <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-heading mb-2">
-                    Imię i nazwisko *
-                  </label>
-                  <Input
-                    id="name"
-                    name="name"
-                    required
-                    placeholder="Jan Kowalski"
-                    className="border-border focus:border-primary focus:ring-primary"
-                  />
-                </div>
-                <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-heading mb-2">
-                    Telefon
-                  </label>
-                  <Input
-                    id="phone"
-                    name="phone"
-                    type="tel"
-                    placeholder="+48 123 456 789"
-                    className="border-border focus:border-primary focus:ring-primary"
-                  />
-                </div>
-              </div>
-
-              <div>
-                <label htmlFor="email" className="block text-sm font-medium text-heading mb-2">
-                  Adres e-mail *
-                </label>
-                <Input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  placeholder="jan.kowalski@email.pl"
-                  className="border-border focus:border-primary focus:ring-primary"
-                />
-              </div>
-
-              <div>
-                <label htmlFor="message" className="block text-sm font-medium text-heading mb-2">
-                  Wiadomość *
-                </label>
-                <Textarea
-                  id="message"
-                  name="message"
-                  required
-                  rows={5}
-                  placeholder="Opisz krótko swoją sprawę..."
-                  className="border-border focus:border-primary focus:ring-primary resize-none"
-                />
-              </div>
-
-              {/* GDPR Checkbox */}
-              <div className="flex items-start gap-3">
-                <Checkbox
-                  id="gdpr"
-                  checked={gdprConsent}
-                  onCheckedChange={(checked) => setGdprConsent(checked as boolean)}
-                  className="mt-1 border-border data-[state=checked]:bg-primary data-[state=checked]:border-primary"
-                />
-                <label htmlFor="gdpr" className="text-sm text-muted-foreground leading-relaxed cursor-pointer">
-                  Wyrażam zgodę na przetwarzanie moich danych osobowych zgodnie z{" "}
-                  <a href="/polityka-prywatnosci" className="text-primary hover:underline">
-                    Polityką Prywatności
-                  </a>{" "}
-                  w celu udzielenia odpowiedzi na przesłaną wiadomość. *
-                </label>
-              </div>
-
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="bg-primary hover:bg-green-hover text-primary-foreground px-8 py-6 text-base font-medium w-full sm:w-auto"
+            <div className="relative rounded-2xl overflow-hidden bg-card/30 backdrop-blur-sm border border-border/50 shadow-xl">
+              {/* Glassmorphism overlay */}
+              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 pointer-events-none" />
+              
+              <iframe
+                src="https://docs.google.com/forms/d/e/1FAIpQLSe6xZVTQVVmB-5YkT6F_7xG3Uc3QyVYaJ9VyJmTqBUQRyMxKA/viewform?embedded=true"
+                width="100%"
+                height="800"
+                frameBorder="0"
+                marginHeight={0}
+                marginWidth={0}
+                className="relative z-10"
+                title="Formularz kontaktowy"
+                loading="lazy"
               >
-                {isSubmitting ? (
-                  "Wysyłanie..."
-                ) : (
-                  <>
-                    Wyślij wiadomość
-                    <Send className="ml-2 h-4 w-4" />
-                  </>
-                )}
-              </Button>
-            </form>
+                Ładowanie formularza…
+              </iframe>
+            </div>
           </div>
 
           {/* Contact Info & Map */}
