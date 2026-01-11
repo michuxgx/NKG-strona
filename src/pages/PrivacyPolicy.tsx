@@ -1,14 +1,13 @@
 import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import Footer from "@/components/Footer";
-import BackToTop from "@/components/BackToTop";
+import Layout from "@/components/Layout";
 
 const PrivacyPolicy = () => {
   return (
-    <div className="min-h-screen bg-background">
-      {/* Header */}
-      <header className="bg-foreground text-background py-6">
+    <Layout>
+      {/* Back Button */}
+      <div className="pt-24 pb-4 bg-foreground">
         <div className="container">
           <Link to="/">
             <Button variant="ghost" className="text-background hover:text-primary hover:bg-background/10">
@@ -17,10 +16,10 @@ const PrivacyPolicy = () => {
             </Button>
           </Link>
         </div>
-      </header>
+      </div>
 
       {/* Content */}
-      <main className="container py-12 md:py-16">
+      <div className="container py-12 md:py-16">
         <div className="max-w-4xl mx-auto">
           <h1 className="font-serif text-3xl md:text-4xl font-bold text-foreground mb-8">
             Polityka Prywatności
@@ -32,7 +31,7 @@ const PrivacyPolicy = () => {
               <p className="text-foreground/80 leading-relaxed">
                 Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych 
                 przekazanych przez Użytkowników w związku z korzystaniem z usług świadczonych przez 
-                Kancelarię Adwokacką za pośrednictwem strony internetowej.
+                Kancelarię Elegance za pośrednictwem strony internetowej.
               </p>
             </section>
 
@@ -42,7 +41,7 @@ const PrivacyPolicy = () => {
                 1. Administrator Danych Osobowych
               </h2>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Administratorem Państwa danych osobowych jest Kancelaria Adwokacka z siedzibą 
+                Administratorem Państwa danych osobowych jest Kancelaria Elegance z siedzibą 
                 w Warszawie, ul. Przykładowa 123, 00-001 Warszawa, NIP: 000-000-00-00.
               </p>
               <p className="text-foreground/80 leading-relaxed">
@@ -245,7 +244,7 @@ const PrivacyPolicy = () => {
                 danych osobowych prosimy o kontakt:
               </p>
               <div className="bg-muted/50 p-6 rounded-lg mt-4">
-                <p className="text-foreground font-medium">Kancelaria Adwokacka</p>
+                <p className="text-foreground font-medium">Kancelaria Elegance</p>
                 <p className="text-foreground/80">ul. Przykładowa 123</p>
                 <p className="text-foreground/80">00-001 Warszawa</p>
                 <p className="text-foreground/80 mt-2">
@@ -265,11 +264,8 @@ const PrivacyPolicy = () => {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
-      <BackToTop />
-    </div>
+      </div>
+    </Layout>
   );
 };
 
