@@ -6,15 +6,11 @@ import { Switch } from "@/components/ui/switch";
 interface CookiePreferences {
   marketing: boolean;
   analytics: boolean;
-  advertising: boolean;
-  googleData: boolean;
 }
 
 const defaultPreferences: CookiePreferences = {
   marketing: false,
   analytics: false,
-  advertising: false,
-  googleData: false,
 };
 
 const CookieBanner = () => {
@@ -51,8 +47,6 @@ const CookieBanner = () => {
     saveAndClose({
       marketing: true,
       analytics: true,
-      advertising: true,
-      googleData: true,
     });
   };
 
@@ -138,22 +132,6 @@ const CookieBanner = () => {
                   <Switch checked disabled className="opacity-70" />
                 </div>
 
-                {/* Marketing */}
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg border border-border">
-                  <div className="flex-1 pr-4">
-                    <h3 className="text-sm font-medium text-foreground">
-                      Ciasteczka marketingowe
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Pozwalają na personalizację treści marketingowych
-                    </p>
-                  </div>
-                  <Switch
-                    checked={preferences.marketing}
-                    onCheckedChange={() => togglePreference("marketing")}
-                  />
-                </div>
-
                 {/* Analytics */}
                 <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg border border-border">
                   <div className="flex-1 pr-4">
@@ -170,35 +148,19 @@ const CookieBanner = () => {
                   />
                 </div>
 
-                {/* Advertising */}
+                {/* Marketing (includes advertising & personalization) */}
                 <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg border border-border">
                   <div className="flex-1 pr-4">
                     <h3 className="text-sm font-medium text-foreground">
-                      Ciasteczka reklamowe (personalizacja)
+                      Ciasteczka marketingowe
                     </h3>
                     <p className="text-xs text-muted-foreground mt-1">
-                      Umożliwiają wyświetlanie spersonalizowanych reklam
+                      Umożliwiają personalizację treści, wyświetlanie reklam i udostępnianie danych partnerom reklamowym
                     </p>
                   </div>
                   <Switch
-                    checked={preferences.advertising}
-                    onCheckedChange={() => togglePreference("advertising")}
-                  />
-                </div>
-
-                {/* Google Data */}
-                <div className="flex items-center justify-between p-4 bg-muted/50 rounded-lg border border-border">
-                  <div className="flex-1 pr-4">
-                    <h3 className="text-sm font-medium text-foreground">
-                      Ciasteczka reklamowe (przesyłanie danych do Google)
-                    </h3>
-                    <p className="text-xs text-muted-foreground mt-1">
-                      Pozwalają na udostępnianie danych Google Ads
-                    </p>
-                  </div>
-                  <Switch
-                    checked={preferences.googleData}
-                    onCheckedChange={() => togglePreference("googleData")}
+                    checked={preferences.marketing}
+                    onCheckedChange={() => togglePreference("marketing")}
                   />
                 </div>
               </div>
