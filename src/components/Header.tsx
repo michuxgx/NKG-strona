@@ -50,9 +50,11 @@ const Header = () => {
   return (
     <header
       className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled || needsSolidHeader
-          ? "bg-background/95 backdrop-blur-sm shadow-sm border-b border-border"
-          : "bg-transparent"
+        needsSolidHeader
+          ? "bg-background/80 backdrop-blur-sm shadow-sm border-b border-border"
+          : isScrolled
+            ? "bg-background/95 backdrop-blur-sm shadow-sm border-b border-border"
+            : "bg-transparent"
       } ${
         isVisible ? "top-0" : "-top-24"
       }`}
