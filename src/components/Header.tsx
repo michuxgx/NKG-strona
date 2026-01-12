@@ -10,6 +10,7 @@ const Header = () => {
   const lastScrollY = useRef(0);
   const location = useLocation();
   const isHomePage = location.pathname === "/";
+  const needsSolidHeader = ["/polityka-prywatnosci", "/regulamin"].includes(location.pathname);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -49,7 +50,7 @@ const Header = () => {
   return (
     <header
       className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled
+        isScrolled || needsSolidHeader
           ? "bg-background/95 backdrop-blur-sm shadow-sm border-b border-border"
           : "bg-transparent"
       } ${
