@@ -1,7 +1,5 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
-import heroBackground from "@/assets/hero-wroclaw.jpg";
-
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("kontakt");
@@ -11,26 +9,17 @@ const Hero = () => {
       });
     }
   };
-
-  return (
-    <section className="relative min-h-screen flex items-center pt-20 overflow-hidden">
-      {/* Background Image */}
-      <div className="absolute inset-0">
-        <img 
-          src={heroBackground} 
-          alt="Panorama Wrocławia" 
-          className="w-full h-full object-cover object-center"
-        />
-        {/* Dark Overlay with gradient */}
-        <div className="absolute inset-0 bg-gradient-to-r from-background/95 via-background/85 to-background/70" />
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-transparent to-background/50" />
-        {/* Subtle green tint overlay */}
-        <div className="absolute inset-0 bg-primary/5" />
+  return <section className="relative min-h-screen flex items-center pt-20">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 bg-secondary">
+        <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006A4E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
       </div>
 
       {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-0 w-1/3 h-96 bg-gradient-to-l from-primary/10 to-transparent opacity-50" />
-      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/30 to-transparent" />
+      <div className="absolute top-1/4 right-0 w-1/3 h-96 bg-gradient-to-l from-green-light to-transparent opacity-50" />
+      <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
       <div className="container relative z-10">
         <div className="max-w-3xl">
@@ -72,7 +61,6 @@ const Hero = () => {
           
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
 export default Hero;
