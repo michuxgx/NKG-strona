@@ -2,10 +2,8 @@ import { Link } from "react-router-dom";
 import { ArrowLeft } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import Layout from "@/components/Layout";
-
 const TermsOfService = () => {
-  return (
-    <Layout>
+  return <Layout>
       {/* Back Button */}
       <div className="pt-24 pb-4 bg-foreground">
         <div className="container">
@@ -251,7 +249,7 @@ const TermsOfService = () => {
                 W przypadku pytań dotyczących niniejszego Regulaminu prosimy o kontakt:
               </p>
               <div className="bg-muted/50 p-6 rounded-lg mt-4">
-                <p className="text-foreground font-medium">Kancelaria Elegance</p>
+                <p className="text-foreground font-medium">Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś </p>
                 <p className="text-foreground/80">ul. Przykładowa 123</p>
                 <p className="text-foreground/80">00-001 Warszawa</p>
                 <p className="text-foreground/80 mt-2">
@@ -272,8 +270,6 @@ const TermsOfService = () => {
           </div>
         </div>
       </div>
-    </Layout>
-  );
+    </Layout>;
 };
-
 export default TermsOfService;
