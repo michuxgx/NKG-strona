@@ -95,7 +95,7 @@ const Footer = () => {
       <div className="border-t border-background/10">
         <div className="container py-6 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-background/50 text-sm">
-            © {currentYear} Kancelaria Elegance. Wszelkie prawa zastrzeżone.
+            © {currentYear} Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś. Wszelkie prawa zastrzeżone.
           </p>
 
           {/* Social Links */}
