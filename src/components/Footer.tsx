@@ -1,5 +1,6 @@
 import { Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
+import logoNkg from "@/assets/logo-nkg.png";
 const Footer = () => {
   const currentYear = new Date().getFullYear();
   return <footer className="bg-foreground text-background/80">
@@ -9,9 +10,11 @@ const Footer = () => {
           {/* Brand */}
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
-              <div className="w-10 h-10 bg-muted rounded-sm flex items-center justify-center overflow-hidden">
-                <img src="/placeholder.svg" alt="Logo Kancelarii" className="w-full h-full object-contain" />
-              </div>
+              <img 
+                src={logoNkg} 
+                alt="Logo Kancelarii NKG" 
+                className="h-10 w-auto object-contain brightness-0 invert"
+              />
               <div>
                 <p className="font-serif font-semibold text-background text-lg">
                   Kancelaria Adwokacka NKG  

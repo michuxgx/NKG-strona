@@ -2,6 +2,7 @@ import { useState, useEffect, useRef } from "react";
 import { Menu, X, Phone, Mail } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link, useLocation } from "react-router-dom";
+import logoNkg from "@/assets/logo-nkg.png";
 const Header = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isVisible, setIsVisible] = useState(true);
@@ -49,9 +50,11 @@ const Header = () => {
         <div className="flex items-center justify-between h-20">
           {/* Logo */}
           <Link to="/" className="flex items-center gap-3">
-            <div className="w-10 h-10 bg-muted rounded-sm flex items-center justify-center overflow-hidden">
-              <img src="/placeholder.svg" alt="Logo Kancelarii" className="w-full h-full object-contain" />
-            </div>
+            <img 
+              src={logoNkg} 
+              alt="Logo Kancelarii NKG" 
+              className="h-12 w-auto object-contain"
+            />
             <div className="hidden sm:block">
               <p className="font-serif font-semibold text-heading text-lg leading-tight">
                 Kancelaria Adwokacka 
