@@ -9,7 +9,7 @@ const Contact = () => {
           <h2 className="heading-display text-3xl md:text-4xl text-heading mb-4">
             Skontaktuj się z nami
           </h2>
-          <p className="text-body text-lg">Umów się na konsultację wstępną. Chętnie odpowiemy na wszystkie pytania.</p>
+          <p className="text-body text-lg">Chętnie odpowiemy na wszystkie pytania dotyczące współpracy.  </p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">

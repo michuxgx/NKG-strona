@@ -1,31 +1,23 @@
 import { Award, BookOpen, Users2, Clock, Scale } from "lucide-react";
-
-const values = [
-  {
-    icon: Award,
-    title: "Profesjonalizm",
-    description: "Najwyższe standardy etyczne i merytoryczne w każdej sprawie.",
-  },
-  {
-    icon: BookOpen,
-    title: "Doświadczenie",
-    description: "Wieloletnia praktyka w różnorodnych dziedzinach prawa.",
-  },
-  {
-    icon: Users2,
-    title: "Indywidualne podejście",
-    description: "Każdy klient i każda sprawa traktowane są wyjątkowo.",
-  },
-  {
-    icon: Clock,
-    title: "Dyspozycyjność",
-    description: "Stały kontakt i szybka reakcja na potrzeby klientów.",
-  },
-];
-
+const values = [{
+  icon: Award,
+  title: "Profesjonalizm",
+  description: "Najwyższe standardy etyczne i merytoryczne w każdej sprawie."
+}, {
+  icon: BookOpen,
+  title: "Doświadczenie",
+  description: "Wieloletnia praktyka w różnorodnych dziedzinach prawa."
+}, {
+  icon: Users2,
+  title: "Indywidualne podejście",
+  description: "Każdy klient i każda sprawa traktowane są wyjątkowo."
+}, {
+  icon: Clock,
+  title: "Dyspozycyjność",
+  description: "Stały kontakt i szybka reakcja na potrzeby klientów."
+}];
 const About = () => {
-  return (
-    <section id="o-nas" className="section-padding bg-secondary">
+  return <section id="o-nas" className="section-padding bg-secondary">
       <div className="container">
         <div className="grid lg:grid-cols-2 gap-16 items-center">
           {/* Content */}
@@ -36,8 +28,7 @@ const About = () => {
             </h2>
             <div className="space-y-4 text-body text-lg leading-relaxed">
               <p>
-                Kancelaria Adwokacka Jana Kowalskiego to zespół doświadczonych prawników, 
-                którzy od ponad 15 lat świadczą kompleksowe usługi prawne na najwyższym poziomie.
+                Jako adwokat oferuję profesjonalne wsparcie prawne, gwarantując każdemu klientowi osobiste zaangażowanie i doradztwo na najwyższym poziomie.
               </p>
               <p>
                 Naszą misją jest zapewnienie klientom profesjonalnej pomocy prawnej, 
@@ -53,8 +44,7 @@ const About = () => {
             {/* Stats */}
             <div className="mt-10 pt-8 border-t border-border">
               <div className="grid grid-cols-2 gap-6">
-                {values.map((value) => (
-                  <div key={value.title} className="flex items-start gap-3">
+                {values.map(value => <div key={value.title} className="flex items-start gap-3">
                     <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center flex-shrink-0">
                       <value.icon className="w-5 h-5 text-primary" />
                     </div>
@@ -62,8 +52,7 @@ const About = () => {
                       <h4 className="font-semibold text-heading text-sm mb-1">{value.title}</h4>
                       <p className="text-muted-foreground text-sm">{value.description}</p>
                     </div>
-                  </div>
-                ))}
+                  </div>)}
               </div>
             </div>
           </div>
@@ -86,8 +75,6 @@ const About = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default About;
