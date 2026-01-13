@@ -1,4 +1,5 @@
-import { Award, BookOpen, Users2, Clock, Scale } from "lucide-react";
+import { Award, BookOpen, Users2, Clock } from "lucide-react";
+import nataliaPhoto from "@/assets/natalia-photo.jpeg";
 const values = [{
   icon: Award,
   title: "Profesjonalizm",
@@ -60,15 +61,11 @@ const About = () => {
           {/* Image Placeholder */}
           <div className="relative">
             <div className="aspect-[4/5] bg-muted rounded-lg overflow-hidden">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/20" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-6 rounded-full bg-primary/10 flex items-center justify-center">
-                    <Scale className="w-12 h-12 text-primary" />
-                  </div>
-                  <p className="text-muted-foreground text-sm">Zdjęcie kancelarii</p>
-                </div>
-              </div>
+              <img 
+                src={nataliaPhoto} 
+                alt="Adwokat Natalia Kijaczko-Gołaś" 
+                className="w-full h-full object-cover object-top"
+              />
             </div>
             {/* Decorative Element */}
             <div className="absolute -bottom-6 -right-6 w-32 h-32 border-2 border-primary/20 rounded-lg -z-10" />
