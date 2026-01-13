@@ -1,10 +1,8 @@
 import { Facebook, Linkedin, Phone, Mail, MapPin } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Footer = () => {
   const currentYear = new Date().getFullYear();
-  return (
-    <footer className="bg-foreground text-background/80">
+  return <footer className="bg-foreground text-background/80">
       {/* Main Footer */}
       <div className="container py-12">
         <div className="grid md:grid-cols-4 gap-8">
@@ -12,15 +10,11 @@ const Footer = () => {
           <div>
             <Link to="/" className="flex items-center gap-3 mb-4">
               <div className="w-10 h-10 bg-muted rounded-sm flex items-center justify-center overflow-hidden">
-                <img 
-                  src="/placeholder.svg" 
-                  alt="Logo Kancelarii" 
-                  className="w-full h-full object-contain"
-                />
+                <img src="/placeholder.svg" alt="Logo Kancelarii" className="w-full h-full object-contain" />
               </div>
               <div>
                 <p className="font-serif font-semibold text-background text-lg">
-                  Kancelaria Elegance
+                  Kancelaria Adwokacka NKG  
                 </p>
               </div>
             </Link>
@@ -35,19 +29,13 @@ const Footer = () => {
             <h4 className="font-semibold text-background mb-4">Kontakt</h4>
             <ul className="space-y-3">
               <li>
-                <a 
-                  href="tel:+48123456789" 
-                  className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm"
-                >
+                <a href="tel:+48123456789" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
                   <Phone className="w-4 h-4 flex-shrink-0" />
                   <span>+48 123 456 789</span>
                 </a>
               </li>
               <li>
-                <a 
-                  href="mailto:kontakt@kancelaria.pl" 
-                  className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm"
-                >
+                <a href="mailto:kontakt@kancelaria.pl" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
                   <Mail className="w-4 h-4 flex-shrink-0" />
                   <span>kontakt@kancelaria.pl</span>
                 </a>
@@ -121,8 +109,6 @@ const Footer = () => {
           </div>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;

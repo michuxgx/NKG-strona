@@ -1,9 +1,7 @@
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
-
 const Contact = () => {
-  return (
-    <section id="kontakt" className="section-padding bg-background">
+  return <section id="kontakt" className="section-padding bg-background">
       <div className="container">
         {/* Section Header */}
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -11,9 +9,7 @@ const Contact = () => {
           <h2 className="heading-display text-3xl md:text-4xl text-heading mb-4">
             Skontaktuj się z nami
           </h2>
-          <p className="text-body text-lg">
-            Umów się na bezpłatną konsultację wstępną. Chętnie odpowiemy na wszystkie pytania.
-          </p>
+          <p className="text-body text-lg">Umów się na konsultację wstępną. Chętnie odpowiemy na wszystkie pytania.</p>
         </div>
 
         <div className="grid lg:grid-cols-5 gap-12">
@@ -23,18 +19,9 @@ const Contact = () => {
               {/* Glassmorphism overlay */}
               <div className="absolute inset-0 bg-gradient-to-br from-primary/5 via-transparent to-primary/10 pointer-events-none" />
               
-              <iframe
-                src="https://docs.google.com/forms/d/e/1FAIpQLSeSZJhw4YBjhuEc-4KoY9iY1FYcmo_AVu93yPysVWZApqoCvQ/viewform?embedded=true"
-                width="100%"
-                height="1100"
-                frameBorder="0"
-                marginHeight={0}
-                marginWidth={0}
-                className="relative z-10"
-                title="Formularz kontaktowy"
-                loading="lazy"
-                style={{ minHeight: '900px' }}
-              >
+              <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeSZJhw4YBjhuEc-4KoY9iY1FYcmo_AVu93yPysVWZApqoCvQ/viewform?embedded=true" width="100%" height="1100" frameBorder="0" marginHeight={0} marginWidth={0} className="relative z-10" title="Formularz kontaktowy" loading="lazy" style={{
+              minHeight: '900px'
+            }}>
                 Ładowanie formularza…
               </iframe>
             </div>
@@ -42,17 +29,11 @@ const Contact = () => {
             {/* Legal Notice */}
             <p className="text-sm text-muted-foreground text-center px-4">
               Wysyłając formularz, akceptujesz{" "}
-              <Link 
-                to="/regulamin" 
-                className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-              >
+              <Link to="/regulamin" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors">
                 Regulamin
               </Link>{" "}
               oraz{" "}
-              <Link 
-                to="/polityka-prywatnosci" 
-                className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors"
-              >
+              <Link to="/polityka-prywatnosci" className="text-primary hover:text-primary/80 underline underline-offset-2 transition-colors">
                 Politykę Prywatności
               </Link>
               .
@@ -127,8 +108,6 @@ const Contact = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default Contact;
