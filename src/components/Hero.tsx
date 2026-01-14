@@ -14,20 +14,20 @@ const Hero = () => {
   
   return <section className="relative min-h-screen flex items-center pt-20">
       {/* Video Background */}
-      <div className="absolute inset-0 bg-neutral-900">
+      <div className="absolute inset-0 bg-white">
         <video
           autoPlay
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover grayscale"
+          className="absolute inset-0 w-full h-full object-cover grayscale brightness-125 contrast-75 opacity-60"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
-        {/* Fog/Mist Overlay */}
-        <div className="absolute inset-0 bg-white/40 mix-blend-overlay" />
-        {/* Dark overlay for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
+        {/* White fog overlay */}
+        <div className="absolute inset-0 bg-white/50" />
+        {/* Subtle gradient for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
       </div>
 
       {/* Bottom accent line */}
@@ -39,7 +39,7 @@ const Hero = () => {
           <div className="accent-line mb-8 animate-fade-up" />
 
           {/* Heading */}
-          <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 animate-fade-up" style={{
+          <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-heading mb-6 animate-fade-up" style={{
           animationDelay: "0.1s"
         }}>
             Profesjonalna pomoc prawna
@@ -47,7 +47,7 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed animate-fade-up" style={{
+          <p className="text-lg md:text-xl text-body max-w-2xl mb-10 leading-relaxed animate-fade-up" style={{
           animationDelay: "0.2s"
         }}>
             Zapewniamy kompleksową obsługę prawną opartą na wieloletnim doświadczeniu, 
@@ -64,7 +64,7 @@ const Hero = () => {
             </Button>
             <Button onClick={() => document.getElementById("uslugi")?.scrollIntoView({
             behavior: "smooth"
-          })} variant="outline" size="lg" className="border-primary/30 text-foreground hover:bg-primary/5 px-8 py-6 text-base font-medium">
+          })} variant="outline" size="lg" className="border-primary/30 text-heading hover:bg-primary/5 px-8 py-6 text-base font-medium bg-white/60 backdrop-blur-sm">
               Poznaj nasze usługi
             </Button>
           </div>
