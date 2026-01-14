@@ -1,5 +1,7 @@
 import { ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import heroVideo from "@/assets/hero-video.mp4";
+
 const Hero = () => {
   const scrollToContact = () => {
     const element = document.getElementById("kontakt");
@@ -9,16 +11,26 @@ const Hero = () => {
       });
     }
   };
+  
   return <section className="relative min-h-screen flex items-center pt-20">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 bg-secondary">
-        <div className="absolute inset-0 opacity-[0.03]" style={{
-        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23006A4E' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
-      }} />
+      {/* Video Background */}
+      <div className="absolute inset-0 bg-neutral-900">
+        <video
+          autoPlay
+          loop
+          muted
+          playsInline
+          className="absolute inset-0 w-full h-full object-cover grayscale"
+        >
+          <source src={heroVideo} type="video/mp4" />
+        </video>
+        {/* Fog/Mist Overlay */}
+        <div className="absolute inset-0 bg-white/40 mix-blend-overlay" />
+        {/* Dark overlay for text readability */}
+        <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-black/30" />
       </div>
 
-      {/* Decorative Elements */}
-      <div className="absolute top-1/4 right-0 w-1/3 h-96 bg-gradient-to-l from-green-light to-transparent opacity-50" />
+      {/* Bottom accent line */}
       <div className="absolute bottom-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary/20 to-transparent" />
 
       <div className="container relative z-10">
@@ -27,7 +39,7 @@ const Hero = () => {
           <div className="accent-line mb-8 animate-fade-up" />
 
           {/* Heading */}
-          <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-heading mb-6 animate-fade-up" style={{
+          <h1 className="heading-display text-4xl md:text-5xl lg:text-6xl text-white mb-6 animate-fade-up" style={{
           animationDelay: "0.1s"
         }}>
             Profesjonalna pomoc prawna
@@ -35,7 +47,7 @@ const Hero = () => {
           </h1>
 
           {/* Subheading */}
-          <p className="text-lg md:text-xl text-body max-w-2xl mb-10 leading-relaxed animate-fade-up" style={{
+          <p className="text-lg md:text-xl text-white/90 max-w-2xl mb-10 leading-relaxed animate-fade-up" style={{
           animationDelay: "0.2s"
         }}>
             Zapewniamy kompleksową obsługę prawną opartą na wieloletnim doświadczeniu, 
