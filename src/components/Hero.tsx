@@ -20,14 +20,14 @@ const Hero = () => {
           loop
           muted
           playsInline
-          className="absolute inset-0 w-full h-full object-cover grayscale brightness-125 contrast-75 opacity-60"
+          className="absolute inset-0 w-full h-full object-cover grayscale brightness-110 contrast-90 opacity-70"
         >
           <source src={heroVideo} type="video/mp4" />
         </video>
         {/* White fog overlay */}
-        <div className="absolute inset-0 bg-white/50" />
+        <div className="absolute inset-0 bg-white/35" />
         {/* Subtle gradient for text readability */}
-        <div className="absolute inset-0 bg-gradient-to-r from-white/80 via-white/40 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-r from-white/60 via-white/30 to-transparent" />
       </div>
 
       {/* Bottom accent line */}
