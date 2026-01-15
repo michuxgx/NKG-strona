@@ -96,15 +96,7 @@ const Contact = () => {
             </div>
 
             {/* Map Placeholder */}
-            <div className="aspect-[4/3] bg-muted rounded-lg overflow-hidden relative">
-              <div className="absolute inset-0 bg-gradient-to-br from-primary/5 to-primary/10" />
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <MapPin className="w-10 h-10 text-primary/40 mx-auto mb-2" />
-                  <p className="text-muted-foreground text-sm">Mapa Google</p>
-                </div>
-              </div>
-            </div>
+            
           </div>
         </div>
       </div>
