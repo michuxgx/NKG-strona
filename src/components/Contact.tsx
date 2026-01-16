@@ -51,8 +51,8 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-heading mb-1">Adres</h4>
                   <p className="text-muted-foreground">
-                    ul. Marszałkowska 100/10<br />
-                    00-001 Warszawa
+                    ul. Marszałka Józefa Piłsudskiego 74/lok. 320<br />
+                    50-020 Wrocław
                   </p>
                 </div>
               </div>
@@ -63,8 +63,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-heading mb-1">Telefon</h4>
-                  <a href="tel:+48123456789" className="text-muted-foreground hover:text-primary transition-colors">
-                    +48 123 456 789
+                  <a href="tel:+48530172623" className="text-muted-foreground hover:text-primary transition-colors">
+                    +48 530 172 623
                   </a>
                 </div>
               </div>
@@ -75,8 +75,8 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-heading mb-1">E-mail</h4>
-                  <a href="mailto:kontakt@kancelaria.pl" className="text-muted-foreground hover:text-primary transition-colors">
-                    kontakt@kancelaria.pl
+                  <a href="mailto:kontakt@kancelaria-nkg.pl" className="text-muted-foreground hover:text-primary transition-colors">
+                    kontakt@kancelaria-nkg.pl
                   </a>
                 </div>
               </div>

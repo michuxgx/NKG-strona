@@ -29,7 +29,7 @@ const PrivacyPolicy = () => {
               <p className="text-foreground/80 leading-relaxed">
                 Niniejsza Polityka Prywatności określa zasady przetwarzania i ochrony danych osobowych 
                 przekazanych przez Użytkowników w związku z korzystaniem z usług świadczonych przez 
-                Kancelarię Elegance za pośrednictwem strony internetowej.
+                Kancelarię Adwokacką Adwokat Natalia Kijaczko-Gołaś za pośrednictwem strony internetowej.
               </p>
             </section>
 
@@ -39,13 +39,13 @@ const PrivacyPolicy = () => {
                 1. Administrator Danych Osobowych
               </h2>
               <p className="text-foreground/80 leading-relaxed mb-4">
-                Administratorem Państwa danych osobowych jest Kancelaria Elegance z siedzibą 
-                w Warszawie, ul. Przykładowa 123, 00-001 Warszawa, NIP: 000-000-00-00.
+                Administratorem Państwa danych osobowych jest Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś z siedzibą 
+                we Wrocławiu, ul. Marszałka Józefa Piłsudskiego 74/lok. 320, 50-020 Wrocław.
               </p>
               <p className="text-foreground/80 leading-relaxed">
                 W sprawach związanych z ochroną danych osobowych można kontaktować się pod adresem 
-                e-mail: <a href="mailto:kontakt@kancelaria.pl" className="text-primary hover:underline">kontakt@kancelaria.pl</a> lub 
-                telefonicznie: <a href="tel:+48123456789" className="text-primary hover:underline">+48 123 456 789</a>.
+                e-mail: <a href="mailto:kontakt@kancelaria-nkg.pl" className="text-primary hover:underline">kontakt@kancelaria-nkg.pl</a> lub 
+                telefonicznie: <a href="tel:+48530172623" className="text-primary hover:underline">+48 530 172 623</a>.
               </p>
             </section>
 
@@ -243,13 +243,13 @@ const PrivacyPolicy = () => {
               </p>
               <div className="bg-muted/50 p-6 rounded-lg mt-4">
                 <p className="text-foreground font-medium">Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś</p>
-                <p className="text-foreground/80">ul. Przykładowa 123</p>
-                <p className="text-foreground/80">00-001 Warszawa</p>
+                <p className="text-foreground/80">ul. Marszałka Józefa Piłsudskiego 74/lok. 320</p>
+                <p className="text-foreground/80">50-020 Wrocław</p>
                 <p className="text-foreground/80 mt-2">
-                  E-mail: <a href="mailto:kontakt@kancelaria.pl" className="text-primary hover:underline">kontakt@kancelaria.pl</a>
+                  E-mail: <a href="mailto:kontakt@kancelaria-nkg.pl" className="text-primary hover:underline">kontakt@kancelaria-nkg.pl</a>
                 </p>
                 <p className="text-foreground/80">
-                  Telefon: <a href="tel:+48123456789" className="text-primary hover:underline">+48 123 456 789</a>
+                  Telefon: <a href="tel:+48530172623" className="text-primary hover:underline">+48 530 172 623</a>
                 </p>
               </div>
             </section>
