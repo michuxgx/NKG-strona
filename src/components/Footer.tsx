@@ -50,22 +50,22 @@ const Footer = () => {
             <h4 className="font-semibold text-background mb-4">Kontakt</h4>
             <ul className="space-y-3">
               <li>
-                <a href="tel:+48530172623" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
+                <a href="tel:+48123456789" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
                   <Phone className="w-4 h-4 flex-shrink-0" />
-                  <span>+48 530 172 623</span>
+                  <span>+48 123 456 789</span>
                 </a>
               </li>
               <li>
-                <a href="mailto:kontakt@kancelaria-nkg.pl" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
+                <a href="mailto:test@example.com" className="flex items-center gap-2 text-background/60 hover:text-primary transition-colors text-sm">
                   <Mail className="w-4 h-4 flex-shrink-0" />
-                  <span>kontakt@kancelaria-nkg.pl</span>
+                  <span>test@example.com</span>
                 </a>
               </li>
               <li className="flex items-start gap-2 text-background/60 text-sm">
                 <MapPin className="w-4 h-4 flex-shrink-0 mt-0.5" />
                 <span>
-                  ul. Marszałka Józefa Piłsudskiego 74/lok. 320<br />
-                  50-020 Wrocław
+                  ul. Testowa 1/lok. 1<br />
+                  00-000 Warszawa
                 </span>
               </li>
             </ul>
