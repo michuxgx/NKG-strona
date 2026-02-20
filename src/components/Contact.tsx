@@ -51,7 +51,7 @@ const Contact = () => {
                 <div>
                   <h4 className="font-semibold text-heading mb-1">Adres</h4>
                   <p className="text-muted-foreground">
-                    Marszałka Józefa Piłsudskiego 74/lok.320, <br />
+                    Marszałka Józefa Piłsudskiego 74 lok.320, <br />
                     50-020 Wrocław
                   </p>
                 </div>
