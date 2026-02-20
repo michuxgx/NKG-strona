@@ -28,7 +28,7 @@ const TermsOfService = () => {
             <section className="mb-10">
               <p className="text-foreground/80 leading-relaxed">
                 Niniejszy Regulamin określa zasady korzystania z usług prawnych świadczonych przez 
-                Kancelarię Adwokacką Adwokat Natalia Kijaczko-Gołaś oraz warunki korzystania ze strony internetowej.
+                Kancelarię Adwokacką Adwokat Natalię Kijaczko-Gołaś oraz warunki korzystania ze strony internetowej.
               </p>
             </section>
 
@@ -38,7 +38,7 @@ const TermsOfService = () => {
                 1. Definicje
               </h2>
               <ul className="list-disc pl-6 space-y-2 text-foreground/80">
-                <li><strong>Kancelaria</strong> – Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś z siedzibą w Warszawie</li>
+                <li><strong>Kancelaria</strong> – Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś z siedzibą we Wrocławiu</li>
                 <li><strong>Klient</strong> – osoba fizyczna, prawna lub jednostka organizacyjna korzystająca z usług Kancelarii</li>
                 <li><strong>Usługi prawne</strong> – pomoc prawna świadczona przez Kancelarię zgodnie z ustawą Prawo o adwokaturze</li>
                 <li><strong>Strona internetowa</strong> – witryna dostępna pod adresem kancelarii</li>
@@ -250,13 +250,13 @@ const TermsOfService = () => {
               </p>
               <div className="bg-muted/50 p-6 rounded-lg mt-4">
                 <p className="text-foreground font-medium">Kancelaria Adwokacka Adwokat Natalia Kijaczko-Gołaś</p>
-                <p className="text-foreground/80">ul. Testowa 1/lok. 1</p>
-                <p className="text-foreground/80">00-000 Warszawa</p>
+                <p className="text-foreground/80">ul. Marszałka Józefa Piłsudskiego 74 lok.320,</p>
+                <p className="text-foreground/80">50-020 Wrocław</p>
                 <p className="text-foreground/80 mt-2">
-                  E-mail: <a href="mailto:test@example.com" className="text-primary hover:underline">test@example.com</a>
+                  E-mail: <a href="mailto:kontakt@kancelaria-nkg.pl" className="text-primary hover:underline">kontakt@kancelaria-nkg.pl</a>
                 </p>
                 <p className="text-foreground/80">
-                  Telefon: <a href="tel:+48123456789" className="text-primary hover:underline">+48 123 456 789</a>
+                  Telefon: <a href="tel:+48530172623" className="text-primary hover:underline">+48 530 172 623</a>
                 </p>
               </div>
             </section>
